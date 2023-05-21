@@ -1,0 +1,4 @@
+Inorden
+P,H,Q,D,R,I,S,B,T,J,E,K,A,L,F,M,C,N,G,O
+Preorden
+A,B,D,H,P,Q,I,R,S,E,J,T,K,C,F,L,M,G,N,O
