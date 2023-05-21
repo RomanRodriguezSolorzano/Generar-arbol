@@ -1,11 +1,8 @@
-import javax.sound.midi.SysexMessage;
-import javax.swing.*;
-
 public class ArregloArbol {
 
     Recorrido recorridos;
     String[][] arbol;
-    int cantidadNodos = 0;
+    int cantidadNodos;
 
     public ArregloArbol(LeerDatos datos) {
         this.recorridos = datos.getDatosIngresados();
@@ -36,20 +33,19 @@ public class ArregloArbol {
     }
 
     void definirNodosCoincidencia() {
-        int posicionCoincidencia = 0;
+        int posicionCoincidencia;
         for (int y = 1; y < cantidadNodos; y++) {
             posicionCoincidencia = posicionRaiz(y);
             arbol[y][posicionCoincidencia] = arbol[0][posicionCoincidencia];
             flechaAbajo(y,posicionCoincidencia,"│");
-            posicionCoincidencia = 0;
         }
         unirNodos();
     }
 
     void unirNodos() {
-        int posicionRaiz = 0;
-        int posicionHijoIzquierdo = 0;
-        int posicionHijoDereho = 0;
+        int posicionRaiz;
+        int posicionHijoIzquierdo;
+        int posicionHijoDereho;
         for (int y = 1; y < cantidadNodos; y++) {
             posicionRaiz = posicionRaiz(y);
             posicionHijoIzquierdo = nodoIzquierda(y,posicionRaiz);
@@ -157,9 +153,9 @@ public class ArregloArbol {
                 if (arbol[i][j] == null) {
                     sb.append(" ");
                 } else {
-                   // if(!arbol[i][j].equals("│")){
+                   if(!arbol[i][j].equals("│")){
                         sb.append(arbol[i][j]);
-                   //2 }
+                   }
                 }
 
                 if (j < cantidadNodos - 1) {
@@ -168,6 +164,6 @@ public class ArregloArbol {
             }
             sb.append("\n");
         }
-        System.out.println(sb.toString());
+        System.out.println(sb);
     }
 }
