@@ -5,4 +5,8 @@ Ejemplo de entrada:
 
 ![Ejemplo de entrada de datos](https://github.com/RomanRodriguezSolorzano/Generar-arbol/blob/main/assets/entrada.png)
 
+Salida:
+
+![Salida](https://github.com/RomanRodriguezSolorzano/Generar-arbol/blob/main/assets/salida.png)
+
 
